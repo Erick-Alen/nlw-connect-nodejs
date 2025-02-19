@@ -11,6 +11,7 @@ import {
 import z from 'zod'
 import { env } from './env'
 import { subscribeToEventRoute } from './routes/subscribe-to-event-route'
+import { accessInviteLinkRoute } from './routes/access-invite-link'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -40,6 +41,7 @@ app.register(fastifySwaggerUi, {
 // route param -> id do recurso que será usado
 
 app.register(subscribeToEventRoute)
+app.register(accessInviteLinkRoute)
 
 app.get('/hello', () => {
   return 'Hello World'

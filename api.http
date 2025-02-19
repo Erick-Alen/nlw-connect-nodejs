@@ -1,6 +1,10 @@
-POST http://localhost:3000/subscriptions
+POST http://localhost:3333/subscriptions
 Content-Type: application/json
 
 {
   "name":"John Doe","email":"mail@mail.com"
 }
+
+###
+
+GET http://localhost:3333/invites/5630d41c-fe79-4d00-b1aa-e4dd698ca601
